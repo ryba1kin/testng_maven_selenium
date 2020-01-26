@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="all">
+
+    <test name="all">
+        <!--<groups>-->
+            <!--<run>-->
+                <!--<include name="all"/>-->
+            <!--</run>-->
+        <!--</groups>-->
+
+        <packages>
+            <package name="ru.qa.sbt.offroad.test.yandex.tests.E2E.Market"/>
+        </packages>
+    </test>
+
+</suite>

@@ -11,13 +11,13 @@
     - I used ChromeDriver but you can choose other webdriver eg. Mozilla GeckoDriver 
     - So first download ChromeDriver from [http://chromedriver.chromium.org/downloads](http://chromedriver.chromium.org/downloads).
     - Copy your downloaded **chromedriver.exe** file path.
-    - Go to `<project_folder>\src\test\java\testcases\mytheresa\WebdriverSettings.java` file.
+    - Go to `<project_folder>\src\test\java\settings\WebdriverSettings.java` file.
     - Paste the copied file path in `System.setProperty("webdriver.chrome.driver","Paste path here")`.
 
 
 	
 Project is ready to run. Execute following commands and enjoy the automatic web-driver test.
-- Go to project path in terminal. For example: C:\Users\User-Name\eclipse-workspace\E2EUserJourney>
+- Go to project path in terminal. For example: C:\Users\User-Name\IdeaProjects\testng_selenium_maven>
 - Run `mvn clean`
 - Run `mvn compile`
 - Run `mvn test`
