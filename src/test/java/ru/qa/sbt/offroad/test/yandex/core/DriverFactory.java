@@ -10,10 +10,8 @@ import org.slf4j.LoggerFactory;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Set;
 
 import static org.openqa.selenium.Proxy.ProxyType.MANUAL;
-import static ru.qa.sbt.offroad.test.yandex.core.FunctionalHelper.not;
 
 public class DriverFactory {
     private static final Logger logger = LoggerFactory.getLogger(DriverFactory.class);
@@ -89,7 +87,7 @@ public class DriverFactory {
                 desiredCapabilities.setVersion(desiredBrowserVersion);
             }
 
-            webdriver = new RemoteWebDriver(seleniumGridURL, desiredCapabilities, desiredCapabilities);
+            webdriver = new RemoteWebDriver(seleniumGridURL, desiredCapabilities);
         } else {
             webdriver = selectedDriverType.getWebDriverObject(desiredCapabilities);
         }

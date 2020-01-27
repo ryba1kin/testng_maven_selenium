@@ -8,9 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.testng.Assert.fail;
 import static ru.qa.sbt.offroad.test.yandex.constants.Constants.WAIT_EXPLICIT_SEC;
 import static ru.qa.sbt.offroad.test.yandex.core.DriverBase.getDriver;
-import static org.junit.Assert.fail;
 
 public class WebElementHelper {
 
