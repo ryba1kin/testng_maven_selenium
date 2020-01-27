@@ -11,15 +11,8 @@
     - I used ChromeDriver but you can choose other webdriver eg. Mozilla GeckoDriver 
     - So first download ChromeDriver from [http://chromedriver.chromium.org/downloads](http://chromedriver.chromium.org/downloads).
     - Copy your downloaded **chromedriver.exe** file path.
-    - Go to `<project_folder>\src\test\java\settings\WebdriverSettings.java` file.
-    - Paste the copied file path in `System.setProperty("webdriver.chrome.driver","Paste path here")`.
+    - Go to `<project_folder>\src\test\java\ru\qa\sbt\offroad\test\yandex\core\DriverType.java` file.
+    - Paste the copied file path in `System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_79/chromedriver.exe");`.
 
 
 	
-Project is ready to run. Execute following commands and enjoy the automatic web-driver test.
-- Go to project path in terminal. For example: C:\Users\User-Name\IdeaProjects\testng_selenium_maven>
-- Run `mvn clean`
-- Run `mvn compile`
-- Run `mvn test`
-
-You can find the test result in `<project_folder>\target\surefire-reports\index.html`.

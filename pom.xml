@@ -25,10 +25,11 @@
         <java.version>1.8</java.version>
         <logback.version>1.2.3</logback.version>
         <slf4j.version>1.7.21</slf4j.version>
+        <junit-version>4.12</junit-version>
 
 
         <browser>chrome</browser>
-        <threads>3</threads>
+        <threads>1</threads>
         <remote>false</remote>
         <seleniumGridURL>http://localhost:4444/wd/hub</seleniumGridURL>
         <platform/>
@@ -45,12 +46,16 @@
             <properties>
                 <remote>false</remote>
                 <threads>1</threads>
-                <suiteXmlFile>all.suite.xml</suiteXmlFile>
             </properties>
         </profile>
     </profiles>
 
     <dependencies>
+        <!--<dependency>-->
+            <!--<groupId>junit</groupId>-->
+            <!--<artifactId>junit</artifactId>-->
+            <!--<version>${junit-version}</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -102,7 +107,7 @@
                     <!--Groups may be overriden from console, e.g. -DmyGroups="sanity, smoke" -->
                     <!--<groups>${myGroups}</groups>-->
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/suites/${suiteXmlFile}</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/suites/all.suite.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <!--<forkCount>${threads}</forkCount>-->
                     <!--<reuseForks>false</reuseForks>-->
