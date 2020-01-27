@@ -36,7 +36,7 @@ public class Market extends TestBase {
         YandexMarketResultsPage resultsPage = searchCondition.apply();
         //assertions
 
-        assertThat(resultsPage.getResults().size(), is(48));
+        assertThat(resultsPage.getResults().size(), is(10));
 
         String firstResult = resultsPage.getResults()
                 .get(0).getText();
@@ -63,34 +63,7 @@ public class Market extends TestBase {
         YandexMarketResultsPage resultsPage = searchCondition.apply();
 
         //assertions
-        assertThat(resultsPage.getResults().size(), is(48));
-
-        String firstResult = resultsPage.getResults()
-                .get(0).getText();
-        resultsPage = resultsPage.search(firstResult);
-        assertThat(resultsPage.getResults().get(0).getText(), containsString(firstResult));
-    }
-
-    @Test(groups = {"all"})
-    public void notepadsNotFailedFilter() throws Exception {
-        //init
-        YandexStartPage yandexStartPage = new YandexStartPage(getDriver());
-        //navigate
-        YandexMarketPage market = yandexStartPage.goToMarket();
-        //navigate on page
-        market.get(market.getComputerTechnics())
-                .get(market.getNotepads());
-        //set filters
-        YandexMarketExtendedSearchPage searchCondition = market.extendedSearch();
-        searchCondition
-                .checkPrice(searchCondition.getPriceFrom(), 20_000)
-                .checkPrice(searchCondition.getPriceTo(), 25_000)
-                .checkManufacturers("Apple", "HP", "Lenovo", "Samsung");
-
-        YandexMarketResultsPage resultsPage = searchCondition.apply();
-
-        //assertions
-        assertThat(resultsPage.getResults().size(), is(25));
+        assertThat(resultsPage.getResults().size(), is(10));
 
         String firstResult = resultsPage.getResults()
                 .get(0).getText();
